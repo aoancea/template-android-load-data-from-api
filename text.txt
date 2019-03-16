@@ -1,0 +1,4 @@
+https://api.github.com/repos/aoancea/dotnet-core-angular-template/issues
+
+https://guides.codepath.com/android/consuming-apis-with-retrofit
+https://guides.codepath.com/android/Leveraging-the-Gson-Library#generating-models-manually

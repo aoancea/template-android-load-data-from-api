@@ -1,4 +1,4 @@
-package com.example.template_android_load_data_from_api.Models
+package com.example.template_android_load_data_from_api.models
 
 import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName

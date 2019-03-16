@@ -4,17 +4,17 @@ import com.google.gson.GsonBuilder
 import com.google.gson.annotations.SerializedName
 
 
-class BoxOfficeMovieResponse {
+class IssueResponse {
 
     @SerializedName("movies")
-    var movies: List<Movie>? = null
+    var issues: List<Issue>? = null
 
     constructor() {
-        movies = ArrayList()
+        issues = ArrayList()
     }
 
-    fun parseJSON(response: String): BoxOfficeMovieResponse {
+    fun parseJSON(response: String): IssueResponse {
         val gson = GsonBuilder().create()
-        return gson.fromJson(response, BoxOfficeMovieResponse::class.java)
+        return gson.fromJson(response, IssueResponse::class.java)
     }
 }

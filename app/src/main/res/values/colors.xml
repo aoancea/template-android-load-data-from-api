@@ -1,6 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!--Main-->
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
+    <color name="colorBadge">#FF1100</color>
+    <color name="colorControlNormal">#FFFFFF</color>
+    <color name="colorControlActivated">#F55C20</color>
+    <color name="colorControlHighlight">#F55C20</color>
+    <color name="colorToolbarShadow">#30000000</color>
+    <color name="colorRecyclerViewDivider">#E6E6E6</color>
+
+    <!--Backgrounds-->
+    <color name="colorBgGrey">#F5F9FA</color>
+    <color name="colorBgDark">#37393A</color>
+    <color name="colorBgWhite">#ffffff</color>
+    <color name="colorBgButton">#F55C20</color>
+    <color name="colorBgList">#F2F2F2</color>
+    <color name="colorBgStandingsPositionLight">#26000000</color>
+    <color name="colorTransparentBlack">#BF000000</color>
+    <color name="colorTransparentOrange">#BFF55C20</color>
+    <color name="colorBgGoogle">#DC4E42</color>
+    <color name="colorBgFacebook">#3B66A6</color>
+    <color name="colorBgTwitter">#55acee</color>
+    <color name="colorBgYoutube">#ff0000</color>
+    <color name="colorBgInstagram">#C13584</color>
+    <color name="colorBgDisabled">#D3D3D3</color>
+    <color name="colorDivider">#E0E0E0</color>
+    <color name="colorDividerCart">#E5E5E5</color>
+
+    <!--Text-->
+    <color name="colorLightText">#ffffff</color>
+    <color name="colorGreyText">#80252627</color>
+    <color name="colorDarkText">#252627</color>
+    <color name="colorHighlightText">#F55C20</color>
+    <color name="colorLightTextSeason">#E0E0E0</color>
+    <color name="colorTextInactiveTab">#8CFFFFFF</color>
+    <color name="colorDisabledView">#90FFFFFF</color>
+    <color name="colorTextGoogle">#DC4E42</color>
+    <color name="colorTextFacebook">#3B66A6</color>
+    <color name="colorTextCategoryTitle">#CC000000</color>
+    <color name="colorShopItemAttributeTitle">#DE000000</color>
+
+    <!--Bottom Nav-->
+    <color name="colorBotNavBg">#252627</color>
+    <color name="colorBotNavActive">#F55C20</color>
+    <color name="colorBotNavInactive">#8CFFFFFF</color>
+
+    <!--Custom Views-->
+    <color name="colorRefreshIndicator">#50252627</color>
+    <color name="default_circle_indicator_fill_color">#FFFFFFFF</color>
+    <color name="default_circle_indicator_page_color">#00000000</color>
+    <color name="default_circle_indicator_stroke_color">#FFDDDDDD</color>
 </resources>

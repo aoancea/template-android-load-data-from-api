@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/standings_item_container"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@color/colorBgWhite"
+              android:orientation="vertical">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/text_size_small"
+            android:paddingTop="@dimen/text_size_tiny"
+            android:paddingEnd="@dimen/text_size_small"
+            android:paddingBottom="@dimen/text_size_tiny">
+
+        <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+            <TextView
+                    android:id="@+id/team_position"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:textColor="@color/colorDarkText"
+                    android:textSize="@dimen/text_size_small_standings" />
+        </LinearLayout>
+
+        <TextView
+                android:id="@+id/team_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:gravity="start"
+                android:paddingStart="0dp"
+                android:paddingLeft="0dp"
+                android:paddingEnd="5dp"
+                android:paddingRight="5dp"
+                android:textColor="@color/colorDarkText"
+                android:textSize="@dimen/text_size_small_standings" />
+
+        <TextView
+                android:id="@+id/team_played_matches"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="start"
+                android:textColor="@color/colorDarkText"
+                android:textSize="@dimen/text_size_small_standings" />
+
+        <TextView
+                android:id="@+id/team_win_lose"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.5"
+                android:gravity="start"
+                android:textColor="@color/colorDarkText"
+                android:textSize="@dimen/text_size_small_standings" />
+
+        <TextView
+                android:id="@+id/team_goals"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:gravity="start"
+                android:textColor="@color/colorDarkText"
+                android:textSize="@dimen/text_size_small_standings" />
+
+        <TextView
+                android:id="@+id/team_points"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="start"
+                android:textColor="@color/colorDarkText"
+                android:textSize="@dimen/text_size_small_standings" />
+    </LinearLayout>
+</LinearLayout>

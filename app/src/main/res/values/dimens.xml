@@ -2,4 +2,73 @@
     <!-- Default screen margins, per the Android Design guidelines. -->
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="nav_header_vertical_spacing">8dp</dimen>
+    <dimen name="nav_header_height">176dp</dimen>
+    <dimen name="button_padding_left_right">19dp</dimen>
+    <dimen name="button_padding_down">5dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="icon_size_small">12dp</dimen>
+    <dimen name="icon_size_medium">24dp</dimen>
+    <dimen name="icon_size_large">48dp</dimen>
+    <dimen name="icon_size_huge">96dp</dimen>
+
+    <!-- For margins, padding and others -->
+    <dimen name="size_tiny">2dp</dimen>
+    <dimen name="size_small">4dp</dimen>
+    <dimen name="size_medium">8dp</dimen>
+    <dimen name="size_medium_ticket">14dp</dimen>
+    <dimen name="size_large">16dp</dimen>
+    <dimen name="size_large_tickets">22dp</dimen>
+    <dimen name="size_extra_large">24dp</dimen>
+    <dimen name="size_huge">32dp</dimen>
+    <dimen name="size_subscription_layout_padding">36dp</dimen>
+    <dimen name="size_tickets_dialog_width">56dp</dimen>
+    <dimen name="size_tickets_barcode_width">84dp</dimen>
+    <!-- Text sizes -->
+    <dimen name="text_size_extra_tiny">8sp</dimen>
+    <dimen name="text_size_tiny">11sp</dimen>
+    <dimen name="text_size_small_standings">12sp</dimen>
+    <dimen name="text_size_small">13sp</dimen>
+    <dimen name="text_size_medium">14sp</dimen>
+    <dimen name="text_size_large">16sp</dimen>
+    <dimen name="text_size_tickets_header">18sp</dimen>
+    <dimen name="text_size_huge">20sp</dimen>
+    <dimen name="text_size_extra_huge">24sp</dimen>
+    <dimen name="text_size_shop_description_small">10sp</dimen>
+    <!--Buttons-->
+    <dimen name="button_width_small">64dp</dimen>
+    <dimen name="button_height_small">32dp</dimen>
+    <dimen name="button_width_medium">96dp</dimen>
+    <dimen name="button_height_medium">40dp</dimen>
+    <dimen name="checkout_button_horizontal_padding">38dp</dimen>
+    <!--Other Views-->
+    <dimen name="calendar_height">320dp</dimen>
+    <dimen name="avi_progress_bar_size">40dp</dimen>
+    <dimen name="recycler_item_divider">1dp</dimen>
+    <dimen name="refresh_spinner_size">24dp</dimen>
+    <dimen name="appbar_padding_top">8dp</dimen>
+    <dimen name="picture_chooser_list_size">240dp</dimen>
+    <dimen name="card_insets">1dp</dimen>
+    <dimen name="text_input_layout_bottom_margin">21dp</dimen>
+    <dimen name="text_input_layout_end_margin">24dp</dimen>
+    <dimen name="cart_product_image_size">82dp</dimen>
+    <dimen name="shop_list_image_size">100dp</dimen>
+    <dimen name="shop_card_image_size">268dp</dimen>
+    <dimen name="checkout_list_bottom_margin">25dp</dimen>
+    <dimen name="cart_item_padding">9dp</dimen>
+    <!-- View Pager -->
+    <dimen name="slider_image_height">264dp</dimen>
+    <dimen name="circle_indicator_padding">10dp</dimen>
+    <dimen name="default_circle_indicator_radius">3dp</dimen>
+    <dimen name="default_circle_indicator_stroke_width">1dp</dimen>
+    <bool name="default_circle_indicator_centered">true</bool>
+    <bool name="default_circle_indicator_snap">false</bool>
+    <dimen name="height_drawer_logo">36dp</dimen>
+    <dimen name="width_drawer_logo">36dp</dimen>
+    <dimen name="width_drawer_bt_logo">132dp</dimen>
+    <dimen name="width_drawer_aegon_logo">98dp</dimen>
+    <dimen name="width_drawer_dropdown">200dp</dimen>
+    <dimen name="width_qubiz_menu_logo">71dp</dimen>
+    <dimen name="height_qubiz_menu_logo">20dp</dimen>
+
 </resources>

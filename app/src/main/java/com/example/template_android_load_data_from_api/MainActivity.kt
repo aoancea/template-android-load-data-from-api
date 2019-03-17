@@ -2,11 +2,12 @@ package com.example.template_android_load_data_from_api
 
 import android.os.Bundle
 import android.support.design.widget.BottomNavigationView
+import android.support.v4.app.Fragment
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.LinearLayoutManager
 import com.example.template_android_load_data_from_api.adapters.AnimalAdapter
-import com.example.template_android_load_data_from_api.api.ApiCall
-import com.example.template_android_load_data_from_api.api.IApiCall
+import com.example.template_android_load_data_from_api.api.*
+import com.example.template_android_load_data_from_api.fragments.*
 import com.example.template_android_load_data_from_api.models.Issue
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -19,15 +20,15 @@ class MainActivity : AppCompatActivity() {
     private val mOnNavigationItemSelectedListener = BottomNavigationView.OnNavigationItemSelectedListener { item ->
         when (item.itemId) {
             R.id.navigation_home -> {
-                message.setText(R.string.title_home)
+                replaceFragment(HomeFragment())
                 return@OnNavigationItemSelectedListener true
             }
             R.id.navigation_dashboard -> {
-                message.setText(R.string.title_dashboard)
+                replaceFragment(DashboardFragment())
                 return@OnNavigationItemSelectedListener true
             }
             R.id.navigation_notifications -> {
-                message.setText(R.string.title_notifications)
+                replaceFragment(NotificationsFragment())
                 return@OnNavigationItemSelectedListener true
             }
         }
@@ -37,6 +38,8 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        replaceFragment(HomeFragment())
 
         // Loads animals into the ArrayList
         addAnimals()
@@ -114,6 +117,12 @@ class MainActivity : AppCompatActivity() {
                 TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
             }
         })
+    }
+
+    private fun replaceFragment(fragment: Fragment) {
+        val fragmentTransaction = supportFragmentManager.beginTransaction()
+        fragmentTransaction.replace(R.id.frame_layout, fragment)
+        fragmentTransaction.commit()
     }
 
     companion object {

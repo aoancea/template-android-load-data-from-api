@@ -39,6 +39,8 @@ public class ApiCall implements IApiCall {
 
     public interface CallbackInterface<T> {
         void success(T responseObj);
+
+        void fail();
     }
 }
 

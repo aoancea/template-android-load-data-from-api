@@ -34,13 +34,29 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        apiCall.listIssues {
-
-            @Override
-            fun success(issues: List<Issue>) {
+        apiCall.listIssues(object : ApiCall.CallbackInterface<List<Issue>> {
+            override fun success(issues: List<Issue>) {
                 // do something with 'issues' param
+
+                var issuesPrevious: MutableList<Issue> = issues as MutableList<Issue>
+
+                apiCall.listIssues(object : ApiCall.CallbackInterface<List<Issue>> {
+                    override fun success(issues: List<Issue>) {
+                        // do something with 'issues' param
+
+                        issuesPrevious.addAll(issues)
+                    }
+
+                    override fun fail() {
+                        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+                    }
+                })
             }
-        }
+
+            override fun fail() {
+                TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+            }
+        })
 
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener)
     }

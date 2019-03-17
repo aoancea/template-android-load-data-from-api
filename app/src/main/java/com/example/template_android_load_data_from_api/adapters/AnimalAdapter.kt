@@ -5,10 +5,12 @@ import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 import com.example.template_android_load_data_from_api.R
 import kotlinx.android.synthetic.main.animal_list_item.view.*
 
-class AnimalAdapter(private val items: ArrayList<String>, private val context: Context) : RecyclerView.Adapter<ViewHolder>() {
+class AnimalAdapter(private val items: ArrayList<String>, private val context: Context) :
+    RecyclerView.Adapter<ViewHolder>() {
 
     // Gets the number of animals in the list
     override fun getItemCount(): Int {
@@ -28,5 +30,5 @@ class AnimalAdapter(private val items: ArrayList<String>, private val context: C
 
 class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
     // Holds the TextView that will add each animal to
-    val tvAnimalType = view.tv_animal_type
+    val tvAnimalType: TextView = view.tv_animal_type
 }

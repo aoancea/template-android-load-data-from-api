@@ -6,7 +6,7 @@ import android.support.v4.app.Fragment
 import android.support.v7.app.AppCompatActivity
 import com.example.template_android_load_data_from_api.api.ApiCall
 import com.example.template_android_load_data_from_api.api.IApiCall
-import com.example.template_android_load_data_from_api.fragments.DashboardFragment
+import com.example.template_android_load_data_from_api.fragments.AnimalsFragment
 import com.example.template_android_load_data_from_api.fragments.HomeFragment
 import com.example.template_android_load_data_from_api.fragments.NotificationsFragment
 import com.example.template_android_load_data_from_api.models.Issue
@@ -22,8 +22,8 @@ class MainActivity : AppCompatActivity() {
                 replaceFragment(HomeFragment())
                 return@OnNavigationItemSelectedListener true
             }
-            R.id.navigation_dashboard -> {
-                replaceFragment(DashboardFragment())
+            R.id.navigation_animals -> {
+                replaceFragment(AnimalsFragment())
                 return@OnNavigationItemSelectedListener true
             }
             R.id.navigation_notifications -> {

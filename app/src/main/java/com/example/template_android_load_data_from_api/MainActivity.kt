@@ -3,7 +3,6 @@ package com.example.template_android_load_data_from_api
 import android.os.Bundle
 import android.support.design.widget.BottomNavigationView
 import android.support.v7.app.AppCompatActivity
-import android.support.v7.widget.GridLayoutManager
 import android.support.v7.widget.LinearLayoutManager
 import com.example.template_android_load_data_from_api.adapters.AnimalAdapter
 import com.example.template_android_load_data_from_api.api.ApiCall
@@ -15,7 +14,7 @@ class MainActivity : AppCompatActivity() {
 
     private val apiCall: IApiCall = ApiCall()
 
-    val animals: ArrayList<String> = ArrayList()
+    private val animals: ArrayList<String> = ArrayList()
 
     private val mOnNavigationItemSelectedListener = BottomNavigationView.OnNavigationItemSelectedListener { item ->
         when (item.itemId) {
@@ -56,7 +55,7 @@ class MainActivity : AppCompatActivity() {
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener)
     }
 
-    fun addAnimals() {
+    private fun addAnimals() {
         animals.add("dog")
         animals.add("cat")
         animals.add("owl")
@@ -91,7 +90,7 @@ class MainActivity : AppCompatActivity() {
         animals.add("parrot")
     }
 
-    fun loadIssues() {
+    private fun loadIssues() {
         apiCall.listIssues(object : ApiCall.CallbackInterface<List<Issue>> {
             override fun success(issues: List<Issue>) {
                 // do something with 'issues' param

@@ -3,6 +3,7 @@ package com.example.template_android_load_data_from_api
 import android.os.Bundle
 import android.support.design.widget.BottomNavigationView
 import android.support.v7.app.AppCompatActivity
+import android.support.v7.widget.GridLayoutManager
 import android.support.v7.widget.LinearLayoutManager
 import com.example.template_android_load_data_from_api.adapters.AnimalAdapter
 import com.example.template_android_load_data_from_api.api.ApiCall
@@ -50,29 +51,7 @@ class MainActivity : AppCompatActivity() {
         // Access the RecyclerView Adapter and load the data into it
         rv_animal_list.adapter = AnimalAdapter(animals, this)
 
-        apiCall.listIssues(object : ApiCall.CallbackInterface<List<Issue>> {
-            override fun success(issues: List<Issue>) {
-                // do something with 'issues' param
-
-                var issuesPrevious: MutableList<Issue> = issues as MutableList<Issue>
-
-                apiCall.listIssues(object : ApiCall.CallbackInterface<List<Issue>> {
-                    override fun success(issues: List<Issue>) {
-                        // do something with 'issues' param
-
-                        issuesPrevious.addAll(issues)
-                    }
-
-                    override fun fail() {
-                        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
-                    }
-                })
-            }
-
-            override fun fail() {
-                TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
-            }
-        })
+        loadIssues()
 
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener)
     }
@@ -110,6 +89,32 @@ class MainActivity : AppCompatActivity() {
         animals.add("monkey")
         animals.add("penguin")
         animals.add("parrot")
+    }
+
+    fun loadIssues() {
+        apiCall.listIssues(object : ApiCall.CallbackInterface<List<Issue>> {
+            override fun success(issues: List<Issue>) {
+                // do something with 'issues' param
+
+                var issuesPrevious: MutableList<Issue> = issues as MutableList<Issue>
+
+                apiCall.listIssues(object : ApiCall.CallbackInterface<List<Issue>> {
+                    override fun success(issues: List<Issue>) {
+                        // do something with 'issues' param
+
+                        issuesPrevious.addAll(issues)
+                    }
+
+                    override fun fail() {
+                        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+                    }
+                })
+            }
+
+            override fun fail() {
+                TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+            }
+        })
     }
 
     companion object {

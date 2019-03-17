@@ -8,7 +8,7 @@ import com.example.template_android_load_data_from_api.api.ApiCall
 import com.example.template_android_load_data_from_api.api.IApiCall
 import com.example.template_android_load_data_from_api.fragments.AnimalsFragment
 import com.example.template_android_load_data_from_api.fragments.HomeFragment
-import com.example.template_android_load_data_from_api.fragments.NotificationsFragment
+import com.example.template_android_load_data_from_api.fragments.TeamStandingsFragment
 import com.example.template_android_load_data_from_api.models.Issue
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -26,8 +26,8 @@ class MainActivity : AppCompatActivity() {
                 replaceFragment(AnimalsFragment())
                 return@OnNavigationItemSelectedListener true
             }
-            R.id.navigation_notifications -> {
-                replaceFragment(NotificationsFragment())
+            R.id.navigation_team_standings -> {
+                replaceFragment(TeamStandingsFragment())
                 return@OnNavigationItemSelectedListener true
             }
         }

@@ -2,9 +2,9 @@
     <string name="app_name">template-android-load-data-from-api</string>
     <string name="title_home">Home</string>
     <string name="title_animals">Animals</string>
-    <string name="title_notifications">Notifications</string>
+    <string name="title_team_standings">Team standings</string>
 
     <string name="fragment_home_text">Home page fragment</string>
     <string name="fragment_animals_text">Animals page fragment</string>
-    <string name="fragment_notifications_text">Notifications page fragment</string>
+    <string name="fragment_team_standings_text">Team standings page fragment</string>
 </resources>

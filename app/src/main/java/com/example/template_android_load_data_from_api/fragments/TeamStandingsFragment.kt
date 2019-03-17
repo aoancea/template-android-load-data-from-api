@@ -11,15 +11,15 @@ import com.example.template_android_load_data_from_api.R
 import com.example.template_android_load_data_from_api.adapters.TeamStandingAdapter
 import com.example.template_android_load_data_from_api.models.Team
 
-import kotlinx.android.synthetic.main.fragment_notifications.*
+import kotlinx.android.synthetic.main.fragment_team_standings.*
 
-class NotificationsFragment : Fragment() {
+class TeamStandingsFragment : Fragment() {
 
     private val teams: ArrayList<Team> = ArrayList()
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_notifications, container, false)
+        return inflater.inflate(R.layout.fragment_team_standings, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

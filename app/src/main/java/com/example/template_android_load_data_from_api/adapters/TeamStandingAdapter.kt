@@ -1,6 +1,7 @@
 package com.example.template_android_load_data_from_api.adapters
 
 import android.content.Context
+import android.support.v4.content.ContextCompat
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
@@ -25,6 +26,14 @@ class TeamStandingAdapter(private val teams: ArrayList<Team>, private val contex
 
     // Binds each animal in the ArrayList to a view
     override fun onBindViewHolder(holder: TeamItemViewHolder, position: Int) {
+
+        if (position == 0) {
+            holder.itemView.setBackgroundColor(ContextCompat.getColor(context, R.color.colorHighlightText))
+        } else if (position % 2 == 0) {
+            holder.itemView.setBackgroundColor(ContextCompat.getColor(context, R.color.colorBgList))
+        } else {
+            holder.itemView.setBackgroundColor(ContextCompat.getColor(context, R.color.colorBgWhite))
+        }
 
         var team: Team = teams[position]
 

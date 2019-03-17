@@ -28,5 +28,5 @@ class AnimalAdapter(private val items: ArrayList<String>, private val context: C
 
 class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
     // Holds the TextView that will add each animal to
-    val tvAnimalType = view.tv_animal_type!!
+    val tvAnimalType = view.tv_animal_type
 }

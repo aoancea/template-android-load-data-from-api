@@ -24,17 +24,35 @@ class AnimalsFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        val self = this
+
         // Loads animals into the ArrayList
         addAnimals()
 
         // Creates a vertical Layout Manager
-        rv_animal_list.layoutManager = LinearLayoutManager(this.requireContext())
+        rv_animal_list.layoutManager = LinearLayoutManager(self.requireContext())
 
         // You can use GridLayoutManager if you want multiple columns. Enter the number of columns as a parameter.
 //        rv_animal_list.layoutManager = GridLayoutManager(this, 2)
 
         // Access the RecyclerView Adapter and load the data into it
-        rv_animal_list.adapter = AnimalAdapter(animals, this.requireContext())
+        rv_animal_list.adapter = AnimalAdapter(animals, self.requireContext())
+
+        simpleSearchView.setOnQueryTextListener(object : android.widget.SearchView.OnQueryTextListener {
+            override fun onQueryTextChange(newText: String): Boolean {
+
+                val newAnimals = animals.filter { it.contains(newText, true) } as ArrayList<String>
+
+                rv_animal_list.adapter = AnimalAdapter(newAnimals, self.requireContext())
+
+                return false
+            }
+
+            override fun onQueryTextSubmit(query: String): Boolean {
+                // task HERE
+                return false
+            }
+        })
     }
 
     private fun addAnimals() {
